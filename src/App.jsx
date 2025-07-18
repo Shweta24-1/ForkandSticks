@@ -1,20 +1,19 @@
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
-
-import Navhero from './Components/navhero';
-import Home from './Components/Home';
-import About from './Components/About';
-import Menu from './Components/Menu';
-import Contacts from './Components/Contacts';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Menu from './components/Menu';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navhero />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Menu" element={<Menu />} />
-        <Route path="/Contacts" element={<Contacts />} />
+        <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </BrowserRouter>
   );
