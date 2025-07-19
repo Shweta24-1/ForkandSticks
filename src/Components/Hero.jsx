@@ -42,7 +42,7 @@ function Hero() {
     <p className="text-white text-3xl mb-6">
       Your go-to kitchen for every craving
     </p>
-    <h1 className="text-orange-300 font-bold text-4xl leading-relaxed text-white">
+    <h1 className="text-orange-300 font-bold text-4xl leading-relaxed">
       Bold Indian flavours — crafted with care,<br />
       sealed fresh, and delivered right to your doorstep.
     </h1>
