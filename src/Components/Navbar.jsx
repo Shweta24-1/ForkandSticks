@@ -2,18 +2,20 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const { pathname } = useLocation();
-
   const isHome = pathname === '/';
 
   return (
     <div
-      className={`${
-        isHome ? 'absolute bg-black bg-opacity-50' : 'sticky top-0 bg-white shadow-md'
-      } left-0 z-50 p-4 w-full flex justify-between items-center transition-all duration-300`}
+      className={`w-full z-50 p-4 flex justify-between items-center transition-all duration-300 ${
+        isHome
+          ? 'absolute top-0 left-0 bg-black bg-opacity-50'
+          : 'sticky top-0 bg-white shadow-md'
+      }`}
     >
       <p className={`font-bold text-3xl ${isHome ? 'text-white' : 'text-black'}`}>
         Fork and Sticks
       </p>
+
       <div className="flex gap-5 text-lg">
         {[
           { to: '/', label: 'Home' },
