@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Menu from './components/Menu';
 import Contacts from './components/Contacts';
+import 'remixicon/fonts/remixicon.css';
+
 
 function App() {
   return (
