@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Hero() {
+  const [showButton, setShowButton] = useState(true);
+  const scrollTimeout = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(false);
+
+      clearTimeout(scrollTimeout.current);
+      scrollTimeout.current = setTimeout(() => {
+        setShowButton(true);
+      }, 150);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout.current);
+    };
+  }, []);
+
   return (
     <>
       <div className="relative h-screen w-screen overflow-hidden">
@@ -24,9 +44,11 @@ function Hero() {
               From crispy chilli potatoes to butter chicken — experience the rich taste of India,
               delivered fresh from our cloud kitchen to your doorstep.
             </p>
-            <button className="bg-orange-500 text-white font-semibold px-6 py-3 mt-10 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 fixed right-6">
-              Order Now
-            </button>
+            {showButton && (
+              <button className="bg-orange-500 text-white font-semibold px-6 py-3 mt-10 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 fixed right-6">
+                Order Now
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -40,9 +62,7 @@ function Hero() {
           />
         </div>
         <div className="w-full md:w-1/2 min-h-screen flex flex-col justify-center px-6 py-10 z-10">
-          <p className="text-white text-3xl mb-6">
-            Your go-to kitchen for every craving
-          </p>
+          <p className="text-white text-3xl mb-6">Your go-to kitchen for every craving</p>
           <h1 className="text-orange-300 font-bold text-4xl leading-relaxed">
             Bold Indian flavours — crafted with care,<br />
             sealed fresh, and delivered right to your doorstep.
@@ -52,12 +72,8 @@ function Hero() {
 
       <div className="bg-black flex pt-10 flex-col mt-0 md:flex-row min-h-screen relative overflow-hidden">
         <div className="w-full md:basis-[55%] min-h-screen flex flex-col justify-center px-6 py-10 z-10">
-          <p className="text-white text-2xl">
-            FRESH. FLAVORFUL. FAST.
-          </p>
-          <h1 className="font-bold text-4xl leading-relaxed mt-2 text-white">
-            Chef’s Cloud Picks
-          </h1>
+          <p className="text-white text-2xl">FRESH. FLAVORFUL. FAST.</p>
+          <h1 className="font-bold text-4xl leading-relaxed mt-2 text-white">Chef’s Cloud Picks</h1>
           <p className="text-white text-3xl mt-2 mb-6">
             Dive into the best of Indian-Chinese fusion, fast food favorites, and mouthwatering vegetarian & chicken dishes. Cooked fresh in our cloud kitchen and delivered hot to your doorstep — this is comfort food, redefined.
           </p>
@@ -98,9 +114,7 @@ function Hero() {
             alt="Award 3"
           />
         </div>
-        <p className="text-gray-400 text-sm italic">
-          More milestones to come... 🚀
-        </p>
+        <p className="text-gray-400 text-sm italic">More milestones to come... 🚀</p>
       </div>
 
       <footer className="bg-[rgb(15,26,26)] flex flex-row justify-between items-center gap-12 px-6 py-8">

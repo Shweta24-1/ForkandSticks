@@ -15,7 +15,7 @@ function Menu() {
       <div className="flex bg-black h-screen w-screen overflow-hidden">
         <div className="h-full w-1/2">
           <img
-            className="h-full w-full object-cover"
+            className="h-[80%] w-[80%] ml-[2rem] object-cover"
             src="https://www.forkandsticks.in/TD-3792.jpg"
             alt="image loading failed"
           />
@@ -87,7 +87,7 @@ function Menu() {
       <div className="flex bg-black h-screen w-screen overflow-hidden">
         <div className="h-full w-1/2">
           <img
-            className="h-full w-full object-cover"
+            className="h-[80%] w-[80%] ml-[2rem] object-cover"
             src="https://www.forkandsticks.in/TD-3811.jpg"
             alt="Chilli Chicken"
           />
@@ -160,7 +160,7 @@ function Menu() {
 <div className="flex bg-black h-screen w-screen overflow-hidden">
   <div className="h-full w-1/2">
     <img
-      className="h-full w-full object-cover"
+      className="h-[80%] w-[80%] ml-[2rem] object-cover"
       src="https://www.forkandsticks.in/TD-3758.jpg"
       alt="Noodles"
     />
@@ -195,7 +195,7 @@ function Menu() {
 <div className="flex bg-black h-screen w-screen overflow-hidden">
   <div className="h-full w-1/2">
     <img
-      className="h-full w-full object-cover"
+      className="h-[80%] w-[80%] ml-[2rem] object-cover"
       src="https://www.forkandsticks.in/TD-3771.jpg"
       alt="Momos & Dimsums"
     />
@@ -229,7 +229,7 @@ function Menu() {
 <div className="flex bg-black h-screen w-screen overflow-hidden">
   <div className="h-full w-1/2">
     <img
-      className="h-full w-full object-cover"
+      className="h-[80%] w-[80%] ml-[2rem] object-cover"
       src="https://www.forkandsticks.in/TD-3807.jpg"
       alt="Fried Rice"
     />
@@ -264,7 +264,7 @@ function Menu() {
 <div className="flex bg-black h-screen w-screen overflow-hidden">
   <div className="h-full w-1/2">
     <img
-      className="h-full w-full object-cover"
+      className="h-[80%] w-[80%] ml-[2rem] object-cover"
       src="https://www.forkandsticks.in/TD-3829.jpg"
       alt="Main Course Gravy"
     />
@@ -298,7 +298,7 @@ function Menu() {
 <div className="flex bg-black h-screen w-screen overflow-hidden">
   <div className="h-full w-1/2">
     <img
-      className="h-full w-full object-cover"
+      className="h-[80%] w-[80%] ml-[2rem] object-cover"
       src="https://www.forkandsticks.in/TD-3802.jpg"
       alt="Beverages & Shakes"
     />
